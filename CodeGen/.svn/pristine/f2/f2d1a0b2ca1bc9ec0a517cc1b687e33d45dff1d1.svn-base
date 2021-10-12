@@ -1,0 +1,51 @@
+package com.bw.codegen;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import com.bw.codegen.model.TargetTable;
+
+/**
+ * Unit test for simple App.
+ */
+public class CodeGenTest
+{
+	public static void main(String[] args) throws Exception
+	{
+		// generate();
+		generateWithAlias();
+	}
+
+	private static void generateWithAlias() throws Exception
+	{
+		// 目标数据表
+		List<TargetTable> targetTbs = new ArrayList<TargetTable>();
+//		targetTbs.add(new TargetTable("JZ_ANSWER_CARD"));
+//		targetTbs.add(new TargetTable("JZ_ERROR_ITEM"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_CYRY"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_INTEGRAL"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_MANAGE"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_MANAGE_INFO"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_PAPER_INFO"));
+//		targetTbs.add(new TargetTable("JZ_EXAM_SCORE"));
+//		targetTbs.add(new TargetTable("JZ_INTEGRAL"));
+//		targetTbs.add(new TargetTable("JZ_INTEGRAL_RECORD"));
+//		targetTbs.add(new TargetTable("JZ_ITEM"));
+//		targetTbs.add(new TargetTable("JZ_ITEM_CHOOSE"));
+//		targetTbs.add(new TargetTable("JZ_ITEM_COUNT_DOWN"));
+//		targetTbs.add(new TargetTable("JZ_KNOWLEDGE_MANAGEMENT"));
+//		targetTbs.add(new TargetTable("JZ_LEARNING_GARDEN"));
+//		targetTbs.add(new TargetTable("JZ_MESSAGE"));
+//		targetTbs.add(new TargetTable("JZ_PAPER"));
+//		targetTbs.add(new TargetTable("JZ_REVIEW_OPINION"));
+//		targetTbs.add(new TargetTable("JZ_LEARNING_GARDEN"));
+//		targetTbs.add(new TargetTable("JZ_MESSAGE"));
+		targetTbs.add(new TargetTable("scpwyth_tzgg_read"));
+		targetTbs.add(new TargetTable("scpwyth_tzgg"));
+		CodeGenMain codeGenMain = new CodeGenMain();
+		Properties p = new Properties();
+		p.load(CodeGenMain.class.getResourceAsStream("/config.properties"));
+		codeGenMain.generateWithAlias(targetTbs, p);
+	}
+}

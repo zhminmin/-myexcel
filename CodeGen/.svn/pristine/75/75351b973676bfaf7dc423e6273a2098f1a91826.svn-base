@@ -1,0 +1,27 @@
+#\u8f93\u51fa\u76ee\u5f55
+diskPath = F://codegen/
+#\u6269\u5c55\u6a21\u5757\u540d
+MODULE_NAME = jcxx
+
+#\u4f7f\u7528\u6a21\u677f\u540d\u79f0 templates | memtemp | 2.0.0
+TEMPLATE_NAME = UAP
+#\u4f5c\u8005
+AUTHOR = caomenglong
+
+#\u6570\u636e\u5e93
+#URL = jdbc:oracle:thin:@192.168.0.52:1521:ORCL
+#\u7528\u6237\u540d
+#USER = JSZSGXPT
+#\u5bc6\u7801
+#PASSWORD = JSZSGXPT
+#\u9a71\u52a8
+#DRIVER = oracle.jdbc.driver.OracleDriver
+
+#\u6570\u636e\u5e93
+URL = jdbc:mysql://192.168.0.56:3306/scqlc
+#\u7528\u6237\u540d
+USER = root
+#\u5bc6\u7801
+PASSWORD = 123456
+#\u9a71\u52a8
+DRIVER = com.mysql.jdbc.Driver
